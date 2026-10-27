@@ -8,6 +8,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -18,45 +19,76 @@ body {
     color: var(--azul);
     line-height: 1.7;
 }
-header {
-    padding: 20px;
+
+.encabezado {
+    background-color: var(--blanco);
     border-bottom: 2px solid var(--verde);
 }
-header > p {
-    margin-bottom: 15px;
+
+.encabezado .navbar {
+    padding: 15px 0;
+}
+
+.encabezado .marca {
     color: var(--verde);
-    font-size: 24px;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 24px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.encabezado .marca:hover {
+    color: var(--azul);
 }
 
-nav a {
-    display: inline-block;
-    padding: 6px 0;
+.marca-sol {
+    color: #9a6100;
+    font-size: 1.5rem;
+}
+
+.encabezado .navbar-nav {
+    gap: 8px;
+}
+
+.encabezado .nav-link {
     color: var(--azul);
     font-weight: 500;
-    text-decoration: none;
 }
 
-nav a:hover {
+.encabezado .nav-link:hover,
+.encabezado .nav-link[aria-current="page"] {
     color: var(--verde);
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 6px;
 }
 
-nav a[aria-current="page"] {
-    color: var(--verde);
+.encabezado .nav-link[aria-current="page"] {
     font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 5px;
+}
+
+.navbar-toggler:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 3px;
+}
+
+.pie-pagina {
+    padding: 30px 0;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.pie-pagina p {
+    margin-bottom: 5px;
+}
+
+.pie-pagina .nombre-pie {
+    color: var(--amarillo);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .pie-pagina .row {
+        gap: 20px;
+    }
 }
 
 main {
@@ -135,17 +167,6 @@ select:focus-visible,
 textarea:focus-visible {
     outline: 3px solid var(--azul);
     outline-offset: 4px;
-}
-
-footer {
-    padding: 24px 20px;
-    background-color: var(--azul);
-    color: var(--blanco);
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
 }
 
 @media (min-width: 768px) {
