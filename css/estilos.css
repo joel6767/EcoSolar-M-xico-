@@ -537,7 +537,6 @@ main.container {
     background-color: var(--blanco);
 }
 
-/* Ajustes para celular */
 @media (max-width: 767px) {
     .impacto-seccion,
     .impacto-beneficios,
@@ -547,5 +546,83 @@ main.container {
 
     .imagen-impacto {
         height: 280px;
+    }
+}
+
+.cotizacion-seccion {
+    padding: 80px 0;
+}
+
+.informacion-cotizacion h2,
+.formulario-cotizacion h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.informacion-cotizacion h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+}
+
+.informacion-cotizacion ul {
+    padding-left: 20px;
+}
+
+.informacion-cotizacion li {
+    margin-bottom: 10px;
+}
+
+.nota-cotizacion {
+    padding: 18px;
+    border-left: 4px solid var(--verde);
+    border-radius: 6px;
+    background-color: #f2f8f4;
+}
+
+.formulario-cotizacion {
+    padding: 35px;
+    border: 1px solid #dbe8df;
+    border-radius: 12px;
+    background-color: var(--blanco);
+    box-shadow: 0 5px 18px rgba(18, 52, 74, 0.07);
+}
+
+.formulario-cotizacion .form-label {
+    color: var(--azul);
+    font-weight: 600;
+}
+
+.formulario-cotizacion .form-control,
+.formulario-cotizacion .form-select {
+    min-height: 48px;
+    border: 1px solid #aabbb0;
+    border-radius: 8px;
+}
+
+.formulario-cotizacion textarea.form-control {
+    min-height: 120px;
+}
+
+.formulario-cotizacion .form-control:focus,
+.formulario-cotizacion .form-select:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 0.2rem rgba(20, 108, 67, 0.2);
+}
+
+.aviso-formulario {
+    margin: 8px 0 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f2f8f4;
+    font-size: 0.9rem;
+}
+@media (max-width: 767px) {
+    .cotizacion-seccion {
+        padding: 60px 0;
+    }
+
+    .formulario-cotizacion {
+        padding: 22px;
     }
 }

@@ -74,14 +74,259 @@
 </header>
 
     <main>
-        <section aria-labelledby="titulo-cotizacion">
-            <h1 id="titulo-cotizacion">Cotiza tu instalación solar</h1>
+  
+    <section class="pagina-encabezado">
+        <div class="container">
+            <p class="etiqueta-seccion">DA EL PRIMER PASO</p>
+
+            <h1>Solicita una cotización solar</h1>
+
             <p>
-                Próximamente encontrarás aquí el formulario para consultar
-                una instalación de paneles solares para tu hogar o negocio.
+                Cuéntanos sobre tu hogar o negocio para conocer tus
+                necesidades de instalación de paneles solares.
             </p>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="cotizacion-seccion">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-12 col-lg-4">
+                    <div class="informacion-cotizacion">
+                        <p class="etiqueta-seccion">TU PROYECTO SOLAR</p>
+
+                        <h2>Comencemos con tus datos</h2>
+
+                        <p>
+                            Llena el formulario con la información de
+                            la propiedad donde te gustaría instalar
+                            paneles solares.
+                        </p>
+
+                        <h3>¿Qué necesitas tener a la mano?</h3>
+
+                        <ul>
+                            <li>Tu ubicación.</li>
+                            <li>El tipo de propiedad.</li>
+                            <li>Una idea de tu consumo de electricidad.</li>
+                        </ul>
+
+                        <p class="nota-cotizacion">
+                            Puedes consultar tu recibo de luz para
+                            conocer tu consumo aproximado.
+                        </p>
+                    </div>
+                </div>
+
+               
+                <div class="col-12 col-lg-8">
+                    <form id="formularioCotizacion" class="formulario-cotizacion">
+                        <h2>Datos para tu cotización</h2>
+
+                        <p>
+                            Los campos marcados con
+                            <span aria-hidden="true">*</span>
+                            <span class="visually-hidden">un asterisco</span>
+                            son obligatorios.
+                        </p>
+
+                        <div class="row g-3">
+
+                            
+                            <div class="col-12 col-md-6">
+                                <label for="nombre" class="form-label">
+                                    Nombre completo *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Escribe tu nombre"
+                                    autocomplete="name"
+                                    minlength="3"
+                                    maxlength="80"
+                                    required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="telefono" class="form-label">
+                                    Teléfono *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="Ejemplo: 7711234567"
+                                    autocomplete="tel"
+                                    inputmode="numeric"
+                                    pattern="[0-9]{10}"
+                                    title="Escribe un número de teléfono de 10 dígitos."
+                                    required>
+
+                                <div class="form-text">
+                                    Escribe 10 dígitos, sin espacios.
+                                </div>
+                            </div>
+
+                           
+                            <div class="col-12 col-md-6">
+                                <label for="correo" class="form-label">
+                                    Correo electrónico *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="correo"
+                                    name="correo"
+                                    placeholder="ejemplo@correo.com"
+                                    autocomplete="email"
+                                    maxlength="100"
+                                    required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="ubicacion" class="form-label">
+                                    Ciudad y estado *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="ubicacion"
+                                    name="ubicacion"
+                                    placeholder="Ejemplo: Tula, Hidalgo"
+                                    minlength="3"
+                                    maxlength="100"
+                                    required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="propiedad" class="form-label">
+                                    Tipo de propiedad *
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="propiedad"
+                                    name="propiedad"
+                                    required>
+
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="hogar">Hogar</option>
+                                    <option value="negocio">Negocio</option>
+                                    <option value="otra">Otra propiedad</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="servicio" class="form-label">
+                                    Servicio de interés *
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="servicio"
+                                    name="servicio"
+                                    required>
+
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="instalacion">Instalación de paneles</option>
+                                    <option value="mantenimiento">Mantenimiento</option>
+                                    <option value="informacion">Solicitar información</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="consumo" class="form-label">
+                                    Consumo aproximado de electricidad
+                                </label>
+
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="consumo"
+                                    name="consumo"
+                                    placeholder="Ejemplo: 300"
+                                    min="1"
+                                    step="1"
+                                    aria-describedby="ayudaConsumo">
+
+                                <div id="ayudaConsumo" class="form-text">
+                                    Escribe los kilowatt-hora (kWh) que aparecen
+                                    en tu recibo. Este campo es opcional.
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="periodo" class="form-label">
+                                    Periodo del recibo
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="periodo"
+                                    name="periodo">
+
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="mensual">Mensual</option>
+                                    <option value="bimestral">Bimestral</option>
+                                    <option value="no-se">No lo sé</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="comentarios" class="form-label">
+                                    Comentarios adicionales
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    id="comentarios"
+                                    name="comentarios"
+                                    rows="4"
+                                    maxlength="500"
+                                    placeholder="Cuéntanos más sobre tu proyecto"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <p class="aviso-formulario">
+                                    Este formulario forma parte de un proyecto
+                                    académico. Por ahora, los datos no se envían
+                                    a una empresa.
+                                </p>
+                            </div>
+
+                            <div class="col-12">
+                                <div
+                                    id="mensajeFormulario"
+                                    role="status"
+                                    aria-live="polite"></div>
+                            </div>
+
+                            <div class="col-12 d-flex flex-wrap gap-3">
+                                <button type="submit" class="btn btn-ecosolar">
+                                    Revisar solicitud
+                                </button>
+
+                                <button type="reset" class="btn boton-secundario">
+                                    Limpiar formulario
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
 
     <footer class="pie-pagina">
     <div class="container">
