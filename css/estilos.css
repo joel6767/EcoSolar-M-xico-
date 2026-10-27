@@ -626,3 +626,21 @@ main.container {
         padding: 22px;
     }
 }
+.mensaje-exito,
+.mensaje-error {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.mensaje-exito {
+    border: 1px solid #146c43;
+    background-color: #e7f4eb;
+    color: #14532d;
+}
+
+.mensaje-error {
+    border: 1px solid #b42318;
+    background-color: #fff0ef;
+    color: #912018;
+}
