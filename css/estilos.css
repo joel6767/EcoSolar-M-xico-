@@ -1,0 +1,159 @@
+:root {
+    --verde: #146c43;
+    --azul: #12344a;
+    --amarillo: #ffd166;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--blanco);
+    color: var(--azul);
+    line-height: 1.7;
+}
+header {
+    padding: 20px;
+    border-bottom: 2px solid var(--verde);
+}
+header > p {
+    margin-bottom: 15px;
+    color: var(--verde);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 6px 0;
+    color: var(--azul);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--verde);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+nav a[aria-current="page"] {
+    color: var(--verde);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+main a {
+    color: var(--verde);
+    font-weight: 600;
+    text-underline-offset: 4px;
+}
+
+main a:hover {
+    color: var(--azul);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-ecosolar {
+    padding: 12px 24px;
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-ecosolar:hover {
+    border-color: var(--azul);
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.btn-amarillo {
+    padding: 12px 24px;
+    border: 2px solid var(--amarillo);
+    border-radius: 8px;
+    background-color: var(--amarillo);
+    color: var(--azul);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-amarillo:hover {
+    border-color: var(--azul);
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 4px;
+}
+
+footer {
+    padding: 24px 20px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 24px 40px;
+    }
+
+    main {
+        padding: 60px 40px;
+    }
+}
