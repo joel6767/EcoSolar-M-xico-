@@ -143,3 +143,54 @@ if (formulario) {
 
     cargarBorrador();
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const botonModo = document.querySelector("#botonModo");
+    const cuerpo = document.body;
+
+    if (!botonModo) {
+        return;
+    }
+
+    // Actualiza el texto del botón
+    function actualizarBoton() {
+        if (cuerpo.classList.contains("modo-oscuro")) {
+            botonModo.textContent = "☀ Modo claro";
+            botonModo.setAttribute("aria-pressed", "true");
+        } else {
+            botonModo.textContent = "🌙 Modo oscuro";
+            botonModo.setAttribute("aria-pressed", "false");
+        }
+    }
+
+    // Recupera el modo guardado
+    try {
+        if (localStorage.getItem("ecosolarModo") === "oscuro") {
+            cuerpo.classList.add("modo-oscuro");
+        }
+    } catch (error) {
+        console.log("No se pudo recuperar el modo guardado.");
+    }
+
+    actualizarBoton();
+
+    // Cambia entre modo claro y oscuro
+    botonModo.addEventListener("click", function () {
+        cuerpo.classList.toggle("modo-oscuro");
+
+        if (cuerpo.classList.contains("modo-oscuro")) {
+            try {
+                localStorage.setItem("ecosolarModo", "oscuro");
+            } catch (error) {
+                console.log("No se pudo guardar el modo.");
+            }
+        } else {
+            try {
+                localStorage.setItem("ecosolarModo", "claro");
+            } catch (error) {
+                console.log("No se pudo guardar el modo.");
+            }
+        }
+
+        actualizarBoton();
+    });
+});

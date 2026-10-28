@@ -19,22 +19,32 @@
 
 
             <a class="navbar-brand marca" href="index.html">
-                <span class="marca-sol" aria-hidden="true">☀</span>
-                EcoSolar México
+             <img
+                src="../img/Captura de pantalla 2026-10-27 155059.png"
+                class="logo"
+                alt="Logo de EcoSolar México">
+             <span>EcoSolar México</span>
             </a>
 
-        
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir o cerrar el menú">
+         <button
+          type="button"
+          class="boton-modo"
+          id="botonModo"
+          aria-pressed="false">
+          Modo oscuro
+        </button>
+                 
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal"
+        aria-expanded="false"
+        aria-label="Abrir o cerrar menú">
 
-                <span class="navbar-toggler-icon"></span>
-            </button>
+     <span class="navbar-toggler-icon"></span>
+    </button>
 
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
@@ -244,7 +254,8 @@
 
         </div>
     </div>
-</footer>
-    <script src="js/script.js" defer></script>
+    <script src="../js/script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

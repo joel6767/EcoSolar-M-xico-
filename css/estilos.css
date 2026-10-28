@@ -1,10 +1,38 @@
 :root {
     --verde: #146c43;
-    --azul: #12344a;
+    --azul: #4b4c4c;
     --amarillo: #ffd166;
     --blanco: #ffffff;
 }
 
+body {
+    font-family: "Isometra", serif;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.encabezado .marca,
+.nav-link,
+.btn,
+.boton-modo {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+input,
+select,
+textarea {
+    font-family: "Isometra", serif;
+}
 * {
     box-sizing: border-box;
 }
@@ -643,4 +671,255 @@ main.container {
     border: 1px solid #b42318;
     background-color: #fff0ef;
     color: #912018;
+}
+/* Logo */
+.encabezado .marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Botón de modo oscuro */
+.boton-modo {
+    padding: 8px 12px;
+    border: 1px solid var(--verde);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--verde);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.boton-modo:hover {
+    background-color: var(--verde);
+    color: var(--blanco);
+}
+
+/* Mejoras de las cards */
+.tarjeta-beneficio,
+.tarjeta-proposito,
+.tarjeta-valor,
+.tarjeta-servicio,
+.tarjeta-impacto,
+.tarjeta-consejo {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.tarjeta-beneficio:hover,
+.tarjeta-proposito:hover,
+.tarjeta-valor:hover,
+.tarjeta-servicio:hover,
+.tarjeta-impacto:hover,
+.tarjeta-consejo:hover {
+    transform: translateY(-8px);
+    border-color: var(--verde);
+    box-shadow: 0 12px 25px rgba(18, 52, 74, 0.16);
+}
+
+/* Efecto al pasar el mouse sobre las imágenes */
+.imagen-portada,
+.imagen-nosotros,
+.imagen-impacto {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+.imagen-portada:hover,
+.imagen-nosotros:hover,
+.imagen-impacto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(18, 52, 74, 0.3);
+    filter: brightness(1.08);
+}
+
+/* Modo oscuro */
+body.modo-oscuro {
+    background-color: #101820;
+    color: #edf5f0;
+}
+
+.modo-oscuro .encabezado {
+    background-color: #17242c;
+    border-bottom-color: #68c99a;
+}
+
+.modo-oscuro .encabezado .marca,
+.modo-oscuro .encabezado .nav-link,
+.modo-oscuro .etiqueta-portada,
+.modo-oscuro .etiqueta-seccion,
+.modo-oscuro .icono-beneficio,
+.modo-oscuro .icono-proposito,
+.modo-oscuro .icono-servicio,
+.modo-oscuro .icono-impacto,
+.modo-oscuro .numero-paso,
+.modo-oscuro .enlace-servicio {
+    color: #8fe0b6;
+}
+
+.modo-oscuro .encabezado .nav-link:hover,
+.modo-oscuro .encabezado .nav-link[aria-current="page"] {
+    color: #ffffff;
+}
+
+/* Icono del menú móvil */
+.modo-oscuro .navbar-toggler {
+    background-color: #edf5f0;
+}
+
+.modo-oscuro .boton-modo {
+    border-color: #8fe0b6;
+    color: #edf5f0;
+}
+
+.modo-oscuro .boton-modo:hover {
+    background-color: #8fe0b6;
+    color: #101820;
+}
+
+/* Fondos de las secciones */
+.modo-oscuro .portada,
+.modo-oscuro .pagina-encabezado,
+.modo-oscuro .mision-vision,
+.modo-oscuro .proceso-servicio,
+.modo-oscuro .impacto-beneficios {
+    background-color: #1b2d34;
+}
+
+/* Fondos de las cards */
+.modo-oscuro .tarjeta-beneficio,
+.modo-oscuro .tarjeta-proposito,
+.modo-oscuro .tarjeta-valor,
+.modo-oscuro .tarjeta-servicio,
+.modo-oscuro .tarjeta-impacto,
+.modo-oscuro .tarjeta-consejo,
+.modo-oscuro .formulario-cotizacion {
+    border-color: #476354;
+    background-color: #22343b;
+    color: #edf5f0;
+}
+
+.modo-oscuro .nota-cotizacion,
+.modo-oscuro .aviso-formulario {
+    background-color: #22343b;
+    color: #edf5f0;
+}
+
+.modo-oscuro .formulario-cotizacion .form-label,
+.modo-oscuro .formulario-cotizacion .form-text {
+    color: #edf5f0;
+}
+
+.modo-oscuro .boton-secundario {
+    border-color: #8fe0b6;
+    color: #8fe0b6;
+}
+
+.modo-oscuro .boton-secundario:hover {
+    background-color: #8fe0b6;
+    color: #101820;
+}
+
+@media (max-width: 575px) {
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .encabezado .marca {
+        font-size: 1rem;
+    }
+
+    .boton-modo {
+        padding: 6px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta-beneficio,
+    .tarjeta-proposito,
+    .tarjeta-valor,
+    .tarjeta-servicio,
+    .tarjeta-impacto,
+    .tarjeta-consejo,
+    .imagen-portada,
+    .imagen-nosotros,
+    .imagen-impacto {
+        transition: none;
+    }
+}
+
+/* ===== Mejoras: accesibilidad y formulario ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+.salto-contenido {
+    position: absolute;
+    top: -60px;
+    left: 12px;
+    z-index: 2000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+.salto-contenido:focus {
+    top: 12px;
+    color: var(--blanco);
+}
+
+.formulario-cotizacion .form-control.is-invalid,
+.formulario-cotizacion .form-select.is-invalid {
+    border-color: #b42318;
+}
+
+.formulario-cotizacion .form-control.is-valid,
+.formulario-cotizacion .form-select.is-valid {
+    border-color: var(--verde);
+}
+
+.formulario-cotizacion .invalid-feedback {
+    color: #b42318;
+    font-weight: 500;
+}
+
+.modo-oscuro .formulario-cotizacion .invalid-feedback {
+    color: #ff9e97;
+}
+
+.modo-oscuro .invitacion {
+    background-color: #0b2433;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .imagen-portada:hover,
+    .imagen-nosotros:hover,
+    .imagen-impacto:hover,
+    .tarjeta-beneficio:hover,
+    .tarjeta-proposito:hover,
+    .tarjeta-valor:hover,
+    .tarjeta-servicio:hover,
+    .tarjeta-impacto:hover,
+    .tarjeta-consejo:hover {
+        transform: none;
+    }
 }
