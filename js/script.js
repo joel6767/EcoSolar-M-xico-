@@ -154,10 +154,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Actualiza el texto del botón
     function actualizarBoton() {
         if (cuerpo.classList.contains("modo-oscuro")) {
-            botonModo.textContent = "☀ Modo claro";
+            botonModo.textContent = "Modo claro";
             botonModo.setAttribute("aria-pressed", "true");
         } else {
-            botonModo.textContent = "🌙 Modo oscuro";
+            botonModo.textContent = "Modo oscuro";
             botonModo.setAttribute("aria-pressed", "false");
         }
     }
